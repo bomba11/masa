@@ -1,4 +1,10 @@
-# Genesis Sample Theme Changelog
+# Masa Theme Changelog
+
+## [2.6.1] - 2018-04-22
+
+* Home page widgets.
+* Font shortcodes.
+* Custom sidebar widgets.
 
 ## [2.6.0] - 2018-03-22
 * Fix product gallery bug in WooCommerce 3.0 update.

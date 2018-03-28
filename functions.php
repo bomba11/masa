@@ -47,9 +47,9 @@ require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-output.p
 require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.php';
 
 // Defines the child theme (do not remove).
-define( 'CHILD_THEME_NAME', 'Genesis Sample' );
-define( 'CHILD_THEME_URL', 'https://www.studiopress.com/' );
-define( 'CHILD_THEME_VERSION', '2.6.0' );
+define( 'CHILD_THEME_NAME', 'Masa' );
+define( 'CHILD_THEME_URL', 'https://fasterwp.com/' );
+define( 'CHILD_THEME_VERSION', '2.6.1' );
 
 add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
 /**
