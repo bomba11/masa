@@ -47,8 +47,8 @@ require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-output.p
 require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.php';
 
 // Defines the child theme (do not remove).
-define( 'CHILD_THEME_NAME', 'Masa' );
-define( 'CHILD_THEME_URL', 'https://fasterwp.com/' );
+define( 'CHILD_THEME_NAME', 'MASA Theme' );
+define( 'CHILD_THEME_URL', 'https://fasterwp.com/downloads/masa/' );
 define( 'CHILD_THEME_VERSION', '2.6.1' );
 
 add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
@@ -278,4 +278,129 @@ function genesis_sample_comments_gravatar( $args ) {
 	$args['avatar_size'] = 60;
 	return $args;
 
+}
+// Register front-page widget areas
+for ( $i = 1; $i <= 5; $i++ ) {
+	genesis_register_widget_area(
+		array(
+			'id'          => "front-page-{$i}",
+			'name'        => __( "Front Page {$i}", 'genesis-sample' ),
+			'description' => __( "This is the front page {$i} section.", 'genesis-sample' ),
+		)
+	);
+}
+
+// Enable shortcodes in text widgets
+add_filter('widget_text','do_shortcode');
+
+/**
+ * Add "first" and "last" CSS classes to dynamic sidebar widgets. Also adds numeric index class for each widget (widget-1, widget-2, etc.)
+ */
+ function widget_first_last_classes( $params ) {
+
+		global $my_widget_num; // Global a counter array
+		$this_id = $params[0]['id']; // Get the id for the current sidebar we're processing
+		$arr_registered_widgets = wp_get_sidebars_widgets(); // Get an array of ALL registered widgets
+
+		if( !$my_widget_num ) {// If the counter array doesn't exist, create it
+			$my_widget_num = array();
+		}
+
+		// if( !isset( $arr_registered_widgets[$this_id] ) || !is_array( $arr_registered_widgets[$this_id] ) ) { // Check if the current sidebar has no widgets
+			// return $params; // No widgets in this sidebar... bail early.
+		// }
+
+		if( isset( $my_widget_num[$this_id] ) ) { // See if the counter array has an entry for this sidebar
+			$my_widget_num[$this_id] ++;
+		} else { // If not, create it starting with 1
+			$my_widget_num[$this_id] = 1;
+		}
+
+		$class = 'class="widget-' . $my_widget_num[$this_id] . ' '; // Add a widget number class for additional styling options
+
+		if( $my_widget_num[$this_id] == 1 ) { // If this is the first widget
+			$class .= 'widget-first ';
+		} elseif( $my_widget_num[$this_id] == count( $arr_registered_widgets[$this_id] ) ) { // If this is the last widget
+			$class .= 'widget-last ';
+		}
+
+		// $params[0]['before_widget'] = str_replace( 'class="', $class, $params[0]['before_widget'] ); // Insert our new classes into "before widget"
+		$params[0]['before_widget'] = preg_replace('/class=\"/', "$class", $params[0]['before_widget'], 1); // Insert our new classes into "before widget"
+
+		return $params;
+
+	}
+	add_filter( 'dynamic_sidebar_params', 'widget_first_last_classes' );
+
+	add_filter( 'get_the_content_more_link', 'button_read_more_link' );
+	function button_read_more_link() {
+	return '<p><a class="button secondary" href="' . get_permalink() . '">Read more</a></p>';
+	}
+	
+	// Font Awesome Shortcodes
+function addscFontAwesome($atts) {
+    extract(shortcode_atts(array(
+    'type'  => '',
+    'size' => '',
+    'rotate' => '',
+    'flip' => '',
+    'pull' => '',
+    'animated' => '',
+    'class' => '',
+
+    ), $atts));
+
+    $classes  = ($type) ? 'fa-'.$type. '' : 'fa-star';
+    $classes .= ($size) ? ' fa-'.$size.'' : '';
+    $classes .= ($rotate) ? ' fa-rotate-'.$rotate.'' : '';
+    $classes .= ($flip) ? ' fa-flip-'.$flip.'' : '';
+    $classes .= ($pull) ? ' pull-'.$pull.'' : '';
+    $classes .= ($animated) ? ' fa-spin' : '';
+    $classes .= ($class) ? ' '.$class : '';
+
+    $theAwesomeFont = '<i class="fa '.esc_html($classes).'"></i>';
+
+    return $theAwesomeFont;
+}
+
+add_shortcode('icon', 'addscFontAwesome');
+
+/**
+ * Setup widget counts.
+ *
+ * @param string $id The widget area ID.
+ * @return int Number of widgets in the widget area.
+ */
+function custom_count_widgets( $id ) {
+    global $sidebars_widgets;
+
+    if ( isset( $sidebars_widgets[ $id ] ) ) {
+        return count( $sidebars_widgets[ $id ] );
+    }
+}
+
+/**
+ * Set the widget class for flexible widgets.
+ *
+ * @param string $id The widget area ID.
+ * @return Name of column class.
+ */
+function custom_widget_area_class( $id ) {
+    $count = custom_count_widgets( $id );
+
+    $class = '';
+
+    if ( 1 === $count ) {
+        $class .= ' widget-full';
+    } elseif ( 0 === $count % 3 ) {
+        $class .= ' widget-thirds';
+    } elseif ( 0 === $count % 4 ) {
+        $class .= ' widget-fourths';
+    } elseif ( 1 === $count % 2 ) {
+        $class .= ' widget-halves uneven';
+    } else {
+        $class .= ' widget-halves';
+    }
+
+    return $class;
 }
