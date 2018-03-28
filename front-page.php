@@ -52,7 +52,7 @@ function masa_body_class( $classes ) {
 function masa_front_page_widgets() {
   for ( $i = 1; $i <= 5; $i++ ) {
     genesis_widget_area( "front-page-{$i}", array(
-        'before' => '<div id="front-page-' . $i . '" class="front-page-' . $i . ' widget-area"><div class="wrap">',
+        'before' => '<div id="front-page-' . $i . '" class="front-page-' . $i . ' flexible-widgets widget-area"><div class="wrap">',
         'after'  => '</div></div>',
     ) );
   }
