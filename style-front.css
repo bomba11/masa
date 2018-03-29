@@ -1,3 +1,6 @@
+/* Front page styles
+---------------------------------------------------------------------------------------------------- */
+
 .front-page.full-width-content .content {
   width: 100%;
 }
@@ -5,10 +8,6 @@
 .front-page .site-inner {
   max-width: 100%;
   padding: 0;
-}
-
-.front-page .wrap {
-
 }
 
 .front-page-2,
@@ -32,30 +31,11 @@
 }
 
 .front-page .widget-title {
-
+  text-transform: uppercase;
 }
 
 /* Flexible Widgets
 ---------------------------------------------------------------------------------------------------- */
-
-.flexible-widgets.widget-fourths .widget,
-.flexible-widgets.widget-halves .widget,
-.flexible-widgets.widget-thirds .widget {
-  width: 100%;
-}
-
-.front-page .one-sixth {
-  width: 31.623931623931625%;
-}
-
-.front-page .one-sixth:nth-of-type(4) {
-  margin-left: 0;
-}
-
-/* Media Queries
----------------------------------------------------------------------------------------------------- */
-
-@media only screen and (min-width: 960px) {
 
 .front-page .flexible-widgets {
 	margin-left: auto;
@@ -71,12 +51,14 @@
 	padding-right: 40px;
 }
 
-.flexible-widgets .widget:last-of-type {
-	margin-bottom: 0;
+.front-page .flexible-widgets .wrap {
+  max-width: 1140px;
 }
 
-.flexible-widgets.widget-halves .widget:last-of-type {
-	margin-bottom: 40px;
+.flexible-widgets.widget-halves .widget:nth-child(even),
+.flexible-widgets.widget-thirds .widget:nth-child(3n+2),
+.flexible-widgets.widget-fourths .widget:nth-child(4n+2) {
+	clear: left;
 }
 
 .flexible-widgets.widget-full .widget,
@@ -85,21 +67,37 @@
 	width: 100%;
 }
 
+.flexible-widgets.widget-fourths .widget,
+.flexible-widgets.widget-halves .widget,
+.flexible-widgets.widget-thirds .widget {
+  width: 100%;
+}
+
+.flexible-widgets .widget:last-of-type {
+	margin-bottom: 0;
+}
+
+.flexible-widgets.widget-halves .widget:last-of-type {
+	margin-bottom: 40px;
+}
+
+/* Media Queries
+---------------------------------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 960px) {
+
 .flexible-widgets.widget-fourths .widget {
 	width: 25%;
+  width: calc(100% / 4);
 }
 
 .flexible-widgets.widget-halves .widget {
 	width: 50%;
+  width: calc(100% / 2);
 }
 
 .flexible-widgets.widget-thirds .widget {
 	width: 33.33%;
-}
-
-.flexible-widgets.widget-halves .widget:nth-child(even),
-.flexible-widgets.widget-thirds .widget:nth-child(3n+2),
-.flexible-widgets.widget-fourths .widget:nth-child(4n+2) {
-	clear: left;
+  width: calc(100% / 3);
 }
 }

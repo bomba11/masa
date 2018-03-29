@@ -2,9 +2,9 @@
 
 ## [2.6.1] - 2018-04-22
 
-* Add front-page widget areas (mobile in progress).
+* Add front-page widget areas.
 * Add font awesome shortcodes (to do).
-* Add "first" and "last" CSS classes to sidebar widgets.
+* Add first, last, and widget-# CSS classes to widgets.
 * Add flexible widgets.
 * Add header search (to do).
 * Add Full Width Page Template for Beaver Builder and Elementor (to do).
