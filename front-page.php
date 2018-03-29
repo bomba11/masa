@@ -48,14 +48,37 @@ function masa_body_class( $classes ) {
 
 }
 
-// Display front-page widget areas.
+
+// Add markup for front page widgets.
 function masa_front_page_widgets() {
-  for ( $i = 1; $i <= 5; $i++ ) {
-    genesis_widget_area( "front-page-{$i}", array(
-        'before' => '<div id="front-page-' . $i . '" class="front-page-' . $i . ' flexible-widgets widget-area"><div class="wrap">',
-        'after'  => '</div></div>',
-    ) );
-  }
+
+	echo '<h2 class="screen-reader-text">' . __( 'Main Content', 'genesis-sample' ) . '</h2>';
+
+	genesis_widget_area( 'front-page-1', array(
+		'before' => '<div class="front-page-1"><div class="flexible-widgets widget-area' . masa_widget_area_class( 'front-page-1' ) . '"><div class="wrap">',
+		'after'  => '</div></div></div>',
+	) );
+
+	genesis_widget_area( 'front-page-2', array(
+		'before' => '<div class="front-page-2"><div class="flexible-widgets widget-area' . masa_widget_area_class( 'front-page-2' ) . '"><div class="wrap">',
+		'after'  => '</div></div></div>',
+	) );
+
+	genesis_widget_area( 'front-page-3', array(
+		'before' => '<div class="front-page-3"><div class="flexible-widgets widget-area' . masa_widget_area_class( 'front-page-3' ) . '"><div class="wrap">',
+		'after'  => '</div></div></div>',
+	) );
+
+	genesis_widget_area( 'front-page-4', array(
+		'before' => '<div class="front-page-4"><div class="flexible-widgets widget-area' . masa_widget_area_class( 'front-page-4' ) . '"><div class="wrap">',
+		'after'  => '</div></div></div>',
+	) );
+
+	genesis_widget_area( 'front-page-5', array(
+		'before' => '<div class="front-page-5"><div class="flexible-widgets widget-area' . masa_widget_area_class( 'front-page-5' ) . '"><div class="wrap">',
+		'after'  => '</div></div></div>',
+	) );
+
 }
 
 // Run the Genesis loop.

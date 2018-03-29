@@ -336,7 +336,7 @@ add_filter('widget_text','do_shortcode');
 	function button_read_more_link() {
 	return '<p><a class="button secondary" href="' . get_permalink() . '">Read more</a></p>';
 	}
-	
+
 	// Font Awesome Shortcodes
 function addscFontAwesome($atts) {
     extract(shortcode_atts(array(
@@ -365,42 +365,36 @@ function addscFontAwesome($atts) {
 
 add_shortcode('icon', 'addscFontAwesome');
 
-/**
- * Setup widget counts.
- *
- * @param string $id The widget area ID.
- * @return int Number of widgets in the widget area.
- */
-function custom_count_widgets( $id ) {
-    global $sidebars_widgets;
+// Setup widget counts.
+function masa_count_widgets( $id ) {
 
-    if ( isset( $sidebars_widgets[ $id ] ) ) {
-        return count( $sidebars_widgets[ $id ] );
-    }
+	$sidebars_widgets = wp_get_sidebars_widgets();
+
+	if ( isset( $sidebars_widgets[ $id ] ) ) {
+		return count( $sidebars_widgets[ $id ] );
+	}
+
 }
 
-/**
- * Set the widget class for flexible widgets.
- *
- * @param string $id The widget area ID.
- * @return Name of column class.
- */
-function custom_widget_area_class( $id ) {
-    $count = custom_count_widgets( $id );
+// Calculate widget count.
+function masa_widget_area_class( $id ) {
 
-    $class = '';
+	$count = masa_count_widgets( $id );
 
-    if ( 1 === $count ) {
-        $class .= ' widget-full';
-    } elseif ( 0 === $count % 3 ) {
-        $class .= ' widget-thirds';
-    } elseif ( 0 === $count % 4 ) {
-        $class .= ' widget-fourths';
-    } elseif ( 1 === $count % 2 ) {
-        $class .= ' widget-halves uneven';
-    } else {
-        $class .= ' widget-halves';
-    }
+	$class = '';
 
-    return $class;
+	if ( $count == 1 ) {
+		$class .= ' widget-full';
+	} elseif ( $count % 3 == 1 ) {
+		$class .= ' widget-thirds';
+	} elseif ( $count % 4 == 1 ) {
+		$class .= ' widget-fourths';
+	} elseif ( $count % 2 == 0 ) {
+		$class .= ' widget-halves uneven';
+	} else {
+		$class .= ' widget-halves';
+	}
+
+	return $class;
+
 }

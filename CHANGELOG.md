@@ -2,12 +2,13 @@
 
 ## [2.6.1] - 2018-04-22
 
-* Add front-page widget areas.
-* Add font awesome shortcodes (to do ).
+* Add front-page widget areas (mobile in progress).
+* Add font awesome shortcodes (to do).
 * Add "first" and "last" CSS classes to sidebar widgets.
-* Add flexible widgets (to do).
+* Add flexible widgets.
 * Add header search (to do).
 * Add Full Width Page Template for Beaver Builder and Elementor (to do).
+* Jetpack-like Related Posts without Jetpack (to do).
 
 ## [2.6.0] - 2018-03-22
 * Fix product gallery bug in WooCommerce 3.0 update.
