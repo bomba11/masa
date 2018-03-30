@@ -36,6 +36,26 @@ function genesis_sample_css() {
 
 	$css = '';
 
+	$opts = apply_filters( 'monochrome_images', array( '1', '4' ) );
+
+	$settings = array();
+
+	foreach( $opts as $opt ) {
+		$settings[$opt]['image'] = preg_replace( '/^https?:/', '', get_option( $opt .'-monochrome-image', sprintf( '%s/images/bg-%s.jpg', get_stylesheet_directory_uri(), $opt ) ) );
+	}
+
+	$css = '';
+
+	foreach ( $settings as $section => $value ) {
+
+		$background = $value['image'] ? sprintf( 'background-image: url(%s);', $value['image'] ) : '';
+
+		if ( is_front_page() ) {
+			$css .= ( ! empty( $section ) && ! empty( $background ) ) ? sprintf( '.front-page-%s { %s }', $section, $background ) : '';
+		}
+
+	}
+
 	$css .= ( genesis_sample_customizer_get_default_link_color() !== $color_link ) ? sprintf(
 		'
 
