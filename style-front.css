@@ -45,6 +45,21 @@
   text-align: center;
 }
 
+.front-page .button {
+  background-color: #0073e5;
+}
+
+.front-page .button:hover {
+  background-color: #333;
+}
+
+.fa-3x,
+.fa-4x {
+    color: #0073e5;
+    text-shadow: 0.1em 0.1em 0 rgba(167,183,199,.236);
+    margin-bottom: 20px;
+  }
+
 /* Flexible Widgets
 ---------------------------------------------------------------------------------------------------- */
 
