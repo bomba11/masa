@@ -61,7 +61,7 @@ function genesis_sample_enqueue_scripts_styles() {
 
 	wp_enqueue_style(
 		'google-fonts',
-		'//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700',
+		'//fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,600,700',
 		array(),
 		CHILD_THEME_VERSION
 	);
