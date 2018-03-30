@@ -10,12 +10,9 @@
   padding: 0;
 }
 
-.front-page-2 {
-    background-color: #000;
-}
-
+.front-page-2,
 .front-page-4 {
-  background-color: #f5f7f9;
+    background-color: #eff2f5;
 }
 
 .front-page-1 {
