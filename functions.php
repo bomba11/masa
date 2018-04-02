@@ -402,3 +402,6 @@ function masa_widget_area_class( $id ) {
 	return $class;
 
 }
+// Add single post navigation.
+add_action( 'genesis_after_entry', 'genesis_prev_next_post_nav' );
+add_action( 'genesis_after_loop', 'genesis_adjacent_entry_nav' );
