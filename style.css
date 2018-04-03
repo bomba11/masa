@@ -1286,8 +1286,8 @@ p.entry-meta {
 	margin: 60px 0;
 }
 
-.adjacent-entry-pagination {
-	margin-bottom: 0;
+.pagination-previous {
+	padding-bottom: 20px;
 }
 
 .archive-pagination li {
