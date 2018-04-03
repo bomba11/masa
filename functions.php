@@ -404,3 +404,32 @@ function masa_widget_area_class( $id ) {
 }
 // Add single post navigation.
 add_action( 'genesis_entry_footer', 'genesis_prev_next_post_nav' );
+
+add_action( 'genesis_header', 'custom_get_header_search_toggle' );
+
+/**
+ * Outputs the header search form toggle button.
+ */
+function custom_get_header_search_toggle() {
+    printf(
+        '<a href="#header-search-wrap" aria-controls="header-search-wrap" aria-expanded="false" role="button" class="toggle-header-search"><span class="screen-reader-text">%s</span><span class="fa fa-search"></span></a>',
+        __( 'Show Search', 'genesis-sample' )
+    );
+}
+
+add_action( 'genesis_header', 'custom_do_header_search_form' );
+/**
+ * Outputs the header search form.
+ */
+function custom_do_header_search_form() {
+    $button = sprintf(
+        '<a href="#" role="button" aria-expanded="false" aria-controls="header-search-wrap" class="toggle-header-search close"><span class="screen-reader-text">%s</span><span class="fa fa-close"></span></a>',
+        __( 'Hide Search', 'genesis-sample' )
+    );
+
+    printf(
+        '<div id="header-search-wrap" class="header-search-wrap">%s %s</div>',
+        get_search_form( false ),
+        $button
+    );
+}
