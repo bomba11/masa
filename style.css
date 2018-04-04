@@ -1518,6 +1518,7 @@ p.entry-meta {
     font-size: 1.2rem;
     -webkit-transform: scale(2);
     transform: scale(2);
+		text-decoration: none;
 }
 
 .toggle-header-search.close .fa {
