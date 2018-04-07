@@ -6,7 +6,6 @@
 * Add line awesome font shortcodes.
 * Add first, last, and widget-# CSS classes to widgets.
 * Add flexible widgets.
-* Add header search (to do).
 * Add Full Width Page Template for Beaver Builder and Elementor (to do).
 * Jetpack-like Related Posts without Jetpack (to do).
 * Add single post navigation.
