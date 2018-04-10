@@ -34,7 +34,7 @@ Please visit <https://fasterwp.com/contact/> for theme support.
 You can find the demo content in the /xml folder (file name masa-demo-content.xml).
 Inside your WordPress dashboard, go to Tools > Import, install WordPress Importer if necessary and run the importer.
 
-If you installed and activated the Widget Importer & Exporter plugin go to Tools > Widget Importer & Exporter, select the masa.wie file from the /xml folder and Import widgets.
+If you installed and activated the Widget Importer & Exporter plugin go to Tools > Widget Importer & Exporter, select the masa-widgets.wie file from the /xml folder and Import widgets.
 
 ### Setup Genesis, widgets & all
 
