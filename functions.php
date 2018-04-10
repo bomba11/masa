@@ -404,3 +404,25 @@ function masa_widget_area_class( $id ) {
 }
 // Add single post navigation.
 add_action( 'genesis_entry_footer', 'genesis_prev_next_post_nav' );
+
+// Register shop sidebar widget area.
+genesis_register_sidebar( array(
+	'id'          => 'shop-sidebar',
+	'name'        => __( 'Shop Sidebar', 'genesis-sample' ),
+	'description' => __( 'This is the shop sidebar widget area if you are using a two column site layout option for your product archive.', 'genesis-sample' ),
+) );
+
+/**
+ * Display shop sidebar widget area.
+ */
+function sp_shop_widget_area() {
+
+	if ( class_exists( 'WooCommerce' ) && is_woocommerce() ) {
+
+		genesis_widget_area( 'shop-sidebar', array(
+		    'before' => '<div class="shop-sidebar">',
+		    'after'  => '</div>',
+		) );
+	}
+}
+add_action( 'genesis_before_sidebar_widget_area', 'sp_shop_widget_area' );
