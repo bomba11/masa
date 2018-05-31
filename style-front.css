@@ -10,15 +10,6 @@
   padding: 0;
 }
 
-.front-page-2 .flexible-widgets .widget_text:nth-of-type(1)::after, .front-page-3 .flexible-widgets .widget_text:nth-of-type(1)::after, .front-page-4 .flexible-widgets .widget_text:nth-of-type(1)::after {
-    border-bottom: 1px solid #031b4e;
-    content: "";
-    display: block;
-    margin-bottom: 40px;
-    padding-bottom: 40px;
-    width: 2.5%;
-}
-
 .front-page-2 .widget-2 {
     background-image: url(./images/feature-card-bg-framework.png),linear-gradient(60deg,#73c5ff 0,#3880ff 100%);
     background-repeat: no-repeat;
@@ -27,6 +18,7 @@
     padding-top: 40px;
     padding-bottom: 40px;
     color: #fff;
+    border-radius: 8px;
 }
 .front-page-3 .widget-2 {
     background-image: url(./images/feature-card-bg-pro.png),linear-gradient(60deg,#050a14 0,#062456 100%);
@@ -35,7 +27,8 @@
     box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
     padding-top: 40px;
     padding-bottom: 40px;
-        color: #fff;
+    color: #fff;
+    border-radius: 8px;
 }
 .front-page-4 .widget-2 {
   background-image: url(./images/feature-card-bg-entrps-support.png),linear-gradient(60deg,#fcc14e 0,#fed4d1 100%);
@@ -44,7 +37,8 @@
   box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
   padding-top: 40px;
   padding-bottom: 40px;
-      color: #fff;
+  color: #fff;
+  border-radius: 8px;
 }
 
 .front-page-1 {
@@ -55,10 +49,6 @@
   -moz-background-size:    cover;
   background-size:         cover;
   color: #fff;
-}
-
-.front-page-3 {
-    background-color: #fff;
 }
 
 .front-page .widget-title {
