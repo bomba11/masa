@@ -1,11 +1,20 @@
 # Masa Theme Changelog
 
+## [2.6.2] - 2018-05-31
+
+* Left aligned Site Title with Centered Navigation
+* Header search
+* Small Improvements (credit Sridhar Katakam)
+* Remove ionicons font shortcodes
+* Replace dashicons with Ionicons in responsive menu and Genesis faq plugin.
+* Add pricing page (4-col only)
+
 ## [2.6.1] - 2018-04-22
 
 * Force better (imho) layouts for WooCommerce.
 * Register and display shop sidebar widget area for WooCommerce.
 * Add front-page widget areas.
-* Add line awesome font shortcodes.
+* Add ionicons font shortcodes.
 * Add first, last, and widget-# CSS classes to widgets.
 * Add flexible widgets.
 * Add single post navigation.

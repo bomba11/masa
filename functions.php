@@ -60,16 +60,10 @@ add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
 function genesis_sample_enqueue_scripts_styles() {
 
 	wp_enqueue_style(
-		'google-fonts',
-		'//fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,600,700',
-		array(),
-		CHILD_THEME_VERSION
-	);
-	wp_enqueue_style( 'dashicons' );
-	wp_enqueue_style(
-		'line-awesome',
-		'https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css'
-	);
+    'monochrome-ionicons', '//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css',
+    array(),
+    CHILD_THEME_VERSION
+);
 
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 	wp_enqueue_script(
@@ -104,9 +98,9 @@ function genesis_sample_responsive_menu_settings() {
 
 	$settings = array(
 		'mainMenu'         => __( 'Menu', 'genesis-sample' ),
-		'menuIconClass'    => 'dashicons-before dashicons-menu',
+		'menuIconClass'    => 'ionicons-before ion-navicon',
 		'subMenu'          => __( 'Submenu', 'genesis-sample' ),
-		'subMenuIconClass' => 'dashicons-before dashicons-arrow-down-alt2',
+		'subMenuIconClass' => 'ionicons-before ion-ios-arrow-down',
 		'menuClasses'      => array(
 			'combine' => array(
 				'.nav-primary',
@@ -182,7 +176,7 @@ unregister_sidebar( 'header-right' );
 // Removes secondary sidebar.
 unregister_sidebar( 'sidebar-alt' );
 
-// Removes site layouts.
+// Removes 3-col site layouts.
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
@@ -341,34 +335,6 @@ add_filter('widget_text','do_shortcode');
 	return '<p><a class="button secondary" href="' . get_permalink() . '">Read more</a></p>';
 	}
 
-	// Line Awesome Shortcodes
-function addscFontAwesome($atts) {
-    extract(shortcode_atts(array(
-    'type'  => '',
-    'size' => '',
-    'rotate' => '',
-    'flip' => '',
-    'pull' => '',
-    'animated' => '',
-    'class' => '',
-
-    ), $atts));
-
-    $classes  = ($type) ? 'fa-'.$type. '' : 'fa-star';
-    $classes .= ($size) ? ' fa-'.$size.'' : '';
-    $classes .= ($rotate) ? ' fa-rotate-'.$rotate.'' : '';
-    $classes .= ($flip) ? ' fa-flip-'.$flip.'' : '';
-    $classes .= ($pull) ? ' pull-'.$pull.'' : '';
-    $classes .= ($animated) ? ' fa-spin' : '';
-    $classes .= ($class) ? ' '.$class : '';
-
-    $theAwesomeFont = '<i class="fa '.esc_html($classes).'"></i>';
-
-    return $theAwesomeFont;
-}
-
-add_shortcode('icon', 'addscFontAwesome');
-
 // Setup widget counts.
 function masa_count_widgets( $id ) {
 
@@ -426,3 +392,31 @@ function sp_shop_widget_area() {
 	}
 }
 add_action( 'genesis_before_sidebar_widget_area', 'sp_shop_widget_area' );
+
+add_action( 'genesis_header', 'custom_get_header_search_toggle' );
+/**
+ * Outputs the header search form toggle button.
+ */
+function custom_get_header_search_toggle() {
+    printf(
+        '<a href="#header-search-wrap" aria-controls="header-search-wrap" aria-expanded="false" role="button" class="toggle-header-search"><span class="screen-reader-text">%s</span><span class="ionicons ion-ios-search"></span></a>',
+        __( 'Show Search', 'genesis-sample' )
+    );
+}
+
+add_action( 'genesis_header', 'custom_do_header_search_form' );
+/**
+ * Outputs the header search form.
+ */
+function custom_do_header_search_form() {
+    $button = sprintf(
+        '<a href="#" role="button" aria-expanded="false" aria-controls="header-search-wrap" class="toggle-header-search close"><span class="screen-reader-text">%s</span><span class="ionicons ion-ios-close-empty"></span></a>',
+        __( 'Hide Search', 'genesis-sample' )
+    );
+
+    printf(
+        '<div id="header-search-wrap" class="header-search-wrap">%s %s</div>',
+        get_search_form( false ),
+        $button
+    );
+}

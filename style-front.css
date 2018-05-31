@@ -16,12 +16,13 @@
 }
 
 .front-page-1 {
-  background-color: #fff;
+  background: linear-gradient(60deg,#3d7afd 0,#4c6df9 50%,#4a68ef 50%,#5b5ef4 100%);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size:    cover;
   background-size:         cover;
+  color: #fff;
 }
 
 .front-page-3 {
@@ -38,6 +39,7 @@
 .front-page-1 h1 {
   font-size: 5rem;
   font-size: 50px;
+  font-weight: 900;
 }
 
 .front-page-3 .widget-first,
@@ -46,11 +48,14 @@
 }
 
 .front-page .button {
-  background-color: #0073e5;
+  background-color: #0039a2;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.12);
 }
 
 .front-page .button:hover {
-  background-color: #333;
+  background-color: #0039a2;
+  transform:translateY(-1px);
+	box-shadow:0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08)
 }
 
 .fa-3x,
