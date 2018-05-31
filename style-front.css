@@ -10,26 +10,6 @@
   padding: 0;
 }
 
-.front-page-2 .widget-2 {
-    background-image: url(./images/feature-card-bg-framework.png),linear-gradient(60deg,#73c5ff 0,#3880ff 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
-    padding-top: 40px;
-    padding-bottom: 40px;
-    color: #fff;
-    border-radius: 8px;
-}
-.front-page-3 .widget-2 {
-    background-image: url(./images/feature-card-bg-pro.png),linear-gradient(60deg,#050a14 0,#062456 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
-    padding-top: 40px;
-    padding-bottom: 40px;
-    color: #fff;
-    border-radius: 8px;
-}
 .front-page-4 .widget-2 {
   background-image: url(./images/feature-card-bg-entrps-support.png),linear-gradient(60deg,#fcc14e 0,#fed4d1 100%);
   background-repeat: no-repeat;
@@ -64,11 +44,6 @@
   font-weight: 900;
 }
 
-.front-page-3 .widget-first,
-.front-page-3 .widget-last {
-  text-align: center;
-}
-
 .front-page .button {
   background-color: #0039a2;
   box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.12);
@@ -78,6 +53,40 @@
   background-color: #0039a2;
   transform:translateY(-1px);
 	box-shadow:0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08)
+}
+
+.front-page-2 .widget-2 {
+    background-image: url(./images/feature-card-bg-framework.png),linear-gradient(60deg,#73c5ff 0,#3880ff 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.front-page-3 {
+  background-color: #f5f7f9;
+}
+
+.front-page-3 .widget-first {
+  text-align: center;
+}
+
+.front-page-3 .widget-last {
+
+}
+
+.front-page-3 .widget-6 {
+    background-image: url(./images/feature-card-bg-pro.png),linear-gradient(60deg,#050a14 0,#062456 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #fff;
+    border-radius: 8px;
 }
 
 /* Flexible Widgets
