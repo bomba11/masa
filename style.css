@@ -1941,6 +1941,8 @@ p.entry-meta {
 
 .pricing-table .one-fourth {
 	border-left: 1px solid #eee;
+	width: 25%;
+	margin-left: 0;
 }
 
 .pricing-table .one-fourth.first {
