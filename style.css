@@ -1242,10 +1242,6 @@ display: none; /* Fix with JS */
 	margin-bottom: 0;
 }
 
-.entry-content code {
-	background-color: #f5f5f5;
-}
-
 .entry-content .caption {
 	font-size: 14px;
 	font-weight: 600;
