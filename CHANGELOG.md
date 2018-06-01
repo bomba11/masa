@@ -2,12 +2,13 @@
 
 ## [2.6.2] - 2018-05-31
 
-* Left aligned Site Title with Centered Navigation
+* Centered Navigation
 * Header search
-* Small Improvements (credit Sridhar Katakam)
+* Small Improvements (from Sridhar Katakam)
 * Remove ionicons font shortcodes
-* Replace dashicons with Ionicons in responsive menu and Genesis faq plugin.
+* Replace dashicons with Ionicons
 * Add pricing page (4-col only)
+* Add Prism CSS
 
 ## [2.6.1] - 2018-04-22
 
