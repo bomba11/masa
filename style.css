@@ -1629,50 +1629,27 @@ p.entry-meta {
 /* Pricing header */
 
 .price .grey {
-	padding: 0 10px 40px;
-	font-size: 20px;
-	font-size: 2rem;
-	font-weight: 600;
+	padding-bottom: 40px;
+	color: #777;
 }
 
 
-.price .header,
-.price .header-2,
-.price .header-3,
-.price .header-4 {
+.price .header {
     font-size: 22px;
 		font-size: 2.2rem;
 		font-weight: 600;
 		padding-top: 30px;
 }
 
-.price .header {
-		color: #1ed176;
-}
-
-.price .header-2 {
-	color: #37adff;
-}
-
-.price .header-3 {
-	color: #5f57ff;
-}
-
-.price .header-4 {
-	color: #f73a66;
-}
-
 /* List items */
 .pricing-table ul > li {
-    padding: 10px;
-    text-align: center;
 		list-style-type: none;
 		font-size: 16px;
 		font-size: 1.6rem;
 }
 
 .price .pay {
-	padding: 40px 10px 30px;
+	padding: 40px 0;
 
 }
 
@@ -1968,6 +1945,12 @@ p.entry-meta {
 
 .pricing-table .one-fourth.first {
 	border-left: none;
+}
+
+/* List items */
+.pricing-table ul > li {
+    padding: 5px;
+    text-align: center;
 }
 
 /* Custom Styles for desktop
