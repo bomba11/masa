@@ -477,7 +477,6 @@ input[type="reset"].secondary,
 input[type="submit"].secondary {
 	background-color: #e1efff;
   color: #3880ff;
-  box-shadow: none;
 }
 
 .site-container button:disabled,
@@ -969,6 +968,9 @@ img.alignright,
 	background-color: #fff;
 	box-shadow: 0 0 20px rgba(0,0,0,0.05);
 	padding: 0 30px;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
 }
 
 /* Title Area
@@ -1663,15 +1665,6 @@ p.entry-meta {
 ---------------------------------------------------------------------------------------------------- */
 
 @media only screen and (min-width: 960px) {
-
-	/* Site Header
-	--------------------------------------------- */
-
-	.site-header {
-		position: fixed;
-		width: 100%;
-		z-index: 9999;
-	}
 
 	/* Genesis Menu
 	--------------------------------------------- */
