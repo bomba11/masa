@@ -466,7 +466,6 @@ input[type="submit"]:hover,
 .button:hover {
 	background-color: #0073e5;
 	color: #fff;
-	box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
 	box-shadow:0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08);
 	transform:translateY(-1px);
 }
@@ -1148,6 +1147,8 @@ display: none; /* Fix with JS */
 	background-color: transparent;
 	border-width: 0;
 	color: #0073e5;
+	box-shadow: none;
+	transform: none;
 }
 
 .menu-toggle {
@@ -1158,6 +1159,7 @@ display: none; /* Fix with JS */
 	padding: 15px 0;
 	position: relative;
 	z-index: 1000;
+	box-shadow: none;
 }
 
 .menu-toggle.activated::before {

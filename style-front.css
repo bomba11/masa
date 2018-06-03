@@ -64,7 +64,11 @@
     color: #fff;
 }
 
-.front-page-4 .widget-2 {
+.front-page-4 {
+  color: #fff;
+}
+
+.front-page-5 .widget-4 {
   background-image: url(./images/four.png),linear-gradient(60deg,#fcc14e 0,#fed4d1 100%);
   background-repeat: no-repeat;
   background-size: cover;
@@ -145,7 +149,7 @@
 
 .front-page-2 .widget-2,
 .front-page-3 .widget-6,
-.front-page-2 .widget-2 {
+.front-page-5 .widget-4  {
     border-radius: 8px;
 }
 
