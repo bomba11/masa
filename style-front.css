@@ -40,6 +40,13 @@
 	box-shadow:0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08)
 }
 
+.front-page .button.secondary:hover {
+  background-color: #e1efff;
+  color: #3880ff;
+  transform:translateY(-1px);
+	box-shadow:0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08)
+}
+
 .front-page-2 .widget-2 {
     background-image: url(./images/too.png),linear-gradient(60deg,#73c5ff 0,#3880ff 100%);
     background-repeat: no-repeat;
