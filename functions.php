@@ -443,3 +443,11 @@ wp_enqueue_script('prismJS');
 }
 
 add_action('wp_enqueue_scripts', 'add_prism');
+
+// Change posts per page in a specific category
+add_action( 'pre_get_posts', 'mp_design_cat_posts_per_page' );
+function mp_design_cat_posts_per_page( $query ) {
+	if( $query->is_main_query() && is_category( 'hosting' ) && ! is_admin() ) {
+		$query->set( 'posts_per_page', '12' );
+	}
+}
