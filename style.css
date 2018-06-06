@@ -1641,6 +1641,11 @@ p.entry-meta {
 	margin-bottom: 30px;
 }
 
+.gs-faq__question,
+.gs-faq__question:hover {
+	box-shadow: none;
+}
+
 
 /* Pricing Page
 --------------------------------------------- */
