@@ -782,6 +782,7 @@ img.centered,
 img.alignnone,
 .alignnone {
 	margin-bottom: 15px;
+	box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
 }
 
 a.alignleft,
@@ -1635,10 +1636,11 @@ p.entry-meta {
     margin: 40px auto;
 }
 
-.img.alignnone, .alignnone {
-	border-radius: 8px;
+.entry-image-link img {
   box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
+	padding-bottom: 30px;
 }
+
 
 /* Pricing Page
 --------------------------------------------- */
