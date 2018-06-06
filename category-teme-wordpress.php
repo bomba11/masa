@@ -11,9 +11,6 @@
  * @return array
  */
 
- //* Force full-width-content layout setting
- //add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
-
 function be_archive_post_class( $classes ) {
 	global $wp_query;
 	if( ! $wp_query->is_main_query() )
