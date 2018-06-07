@@ -65,6 +65,10 @@
 }
 
 .front-page-4 {
+  background: linear-gradient(60deg,#3d7afd 0,#4c6df9 50%,#4a68ef 50%,#5b5ef4 100%);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff;
 }
 
