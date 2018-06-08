@@ -41,7 +41,7 @@
 }
 
 .front-page-2 .widget-2 {
-    background-image: url(./images/too.png),linear-gradient(60deg,#73c5ff 0,#3880ff 100%);
+    background-image: url(./images/too.svg),linear-gradient(60deg,#73c5ff 0,#3880ff 100%);
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
@@ -55,7 +55,7 @@
 }
 
 .front-page-3 .widget-8 {
-    background-image: url(./images/free.png),linear-gradient(60deg,#050a14 0,#062456 100%);
+    background-image: url(./images/free.svg),linear-gradient(60deg,#050a14 0,#062456 100%);
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
@@ -73,7 +73,7 @@
 }
 
 .front-page-5 .widget-4 {
-  background-image: url(./images/four.png),linear-gradient(60deg,#fcc14e 0,#fed4d1 100%);
+  background-image: url(./images/four.svg),linear-gradient(60deg,#fcc14e 0,#fed4d1 100%);
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
@@ -152,7 +152,7 @@
 }
 
 .front-page-2 .widget-2,
-.front-page-3 .widget-6,
+.front-page-3 .widget-8,
 .front-page-5 .widget-4  {
     border-radius: 8px;
 }
