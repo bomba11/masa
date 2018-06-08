@@ -453,3 +453,45 @@ function mp_design_cat_posts_per_page( $query ) {
 }
 
 add_filter( 'gca_load_column_styles', '__return_false' );
+
+add_filter( 'wp', 'jetpackme_remove_rp', 20 );
+/**
+ * Removes Jetpack Related Posts from the bottom of posts.
+ */
+function jetpackme_remove_rp() {
+    if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
+        $jprp = Jetpack_RelatedPosts::init();
+        $callback = array( $jprp, 'filter_add_target_to_dom' );
+        remove_filter( 'the_content', $callback, 40 );
+    }
+}
+
+add_action( 'genesis_after_entry', 'custom_below_entry_section_begin' );
+/**
+ * Adds opening div tag for .below-entry on single posts.
+ */
+function custom_below_entry_section_begin() {
+    if ( is_singular( 'post' ) ) {
+        echo '<div class="below-entry">';
+    }
+}
+
+add_action( 'genesis_after_entry', 'jetpackme_add_rp' );
+/**
+ * Adds JetPack Related Posts below entry on single posts.
+ */
+function jetpackme_add_rp() {
+    if ( is_singular( 'post' ) && class_exists( 'Jetpack_RelatedPosts' ) ) {
+        echo do_shortcode( '[jetpack-related-posts]' );
+    }
+}
+
+add_action( 'genesis_after_entry', 'custom_below_entry_section_end' );
+/**
+ * Adds closing div tag for .below-entry on single posts.
+ */
+function custom_below_entry_section_end() {
+    if ( is_singular( 'post' ) ) {
+        echo '</div>';
+    }
+}
