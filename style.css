@@ -1642,8 +1642,11 @@ p.entry-meta {
 }
 
 .gs-faq__question,
-.gs-faq__question:hover {
+.gs-faq__question:hover,
+.gs-faq__question:active,
+.gs-faq__question:focus {
 	box-shadow: none;
+	transform: none;
 }
 
 /* Pricing Page
