@@ -937,6 +937,8 @@ img.alignright,
 	background: transparent;
 	border-bottom: 1px solid #eee;
 	color: #031b4e;
+	font-size: 16px;
+	font-size: 1.6rem;
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -948,13 +950,15 @@ img.alignright,
 }
 
 .gs-faq__question::after {
-	content: "\f217";
+	content: "\f489";
 	font-family: "ionicons";
+	font-size: 20px;
+	font-size: 2rem;
 	float: right;
 }
 
 .gs-faq__question.gs-faq--expanded::after {
-	content: "\f209";
+	content: "\f462";
 }
 
 /* Jetpack
@@ -1188,6 +1192,7 @@ display: none; /* Fix with JS */
 }
 
 .sub-menu-toggle {
+	box-shadow: none;
 	float: right;
 	padding: 9px 10px;
 	position: absolute;
@@ -1202,6 +1207,8 @@ display: none; /* Fix with JS */
 
 .sub-menu-toggle::before {
 	display: inline-block;
+	font-size: 18px;
+	font-size: 1.8rem;
 	text-rendering: auto;
 	-webkit-transform: rotate( 0 );
 	-ms-transform:     rotate( 0 );
