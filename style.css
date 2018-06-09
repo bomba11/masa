@@ -1168,6 +1168,8 @@ display: none; /* Fix with JS */
 
 .menu-toggle {
 	float: right;
+	font-size: 16px;
+	font-size: 1.6rem;
 	line-height: 20px;
 	margin-bottom: 10px;
 	margin-top: 10px;

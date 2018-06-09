@@ -60,7 +60,7 @@ add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
 function genesis_sample_enqueue_scripts_styles() {
 
 	wp_enqueue_style(
-    'monochrome-ionicons', 'https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css',
+    'ionicons', 'https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css',
     array(),
     CHILD_THEME_VERSION
 );
