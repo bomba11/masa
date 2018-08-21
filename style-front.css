@@ -164,4 +164,8 @@
   text-align: center;
 }
 
+.front-page-1 .widget-wrap {
+  padding-right: 40%;
+}
+
 }
