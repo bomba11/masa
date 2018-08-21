@@ -49,7 +49,7 @@ require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.p
 // Defines the child theme (do not remove).
 define( 'CHILD_THEME_NAME', 'MASA Theme' );
 define( 'CHILD_THEME_URL', 'https://fasterwp.com/downloads/masa/' );
-define( 'CHILD_THEME_VERSION', '2.6.1' );
+define( 'CHILD_THEME_VERSION', '2.6.2' );
 
 add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
 /**
