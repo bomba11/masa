@@ -2030,6 +2030,7 @@ p.entry-meta {
 --------------------------------------------- */
 
 .pricing-table {
+	background-color: #f4f3f9;
 	clear: both;
 	overflow: hidden;
 	border-radius: 4px;
