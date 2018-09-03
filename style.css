@@ -1843,7 +1843,7 @@ p.entry-meta {
 
 	.after-entry {
 		padding: 40px 60px;
-		background: linear-gradient(60deg,#3d7afd 0,#4c6df9 60%,#4a68ef 50%,#5b5ef4 100%);
+		background: url(./images/one.svg),radial-gradient(ellipse at bottom right,#1cafc6,#012690);
 		background-repeat: no-repeat;
 		background-size: cover;
 		box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
