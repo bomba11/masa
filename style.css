@@ -464,7 +464,6 @@ input[type="submit"]:focus,
 input[type="submit"]:hover,
 .button:focus,
 .button:hover {
-	background-color: #0073e5;
 	color: #fff;
 	box-shadow:0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08);
 	transform:translateY(-1px);
@@ -479,8 +478,8 @@ button.secondary,
 input[type="button"].secondary,
 input[type="reset"].secondary,
 input[type="submit"].secondary {
-	background-color: #d6e9ff;
-  color: #3880ff;
+	background-color: #1cafc6;
+  color: #fff;
 }
 
 .site-container button:disabled,
@@ -650,7 +649,7 @@ th:first-child {
 }
 
 .after-entry {
-	background: linear-gradient(60deg,#3d7afd 0,#4c6df9 50%,#4a68ef 50%,#5b5ef4 100%);
+	background: url(./images/one.svg),radial-gradient(ellipse at bottom right,#1cafc6,#012690);
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
@@ -857,16 +856,6 @@ img.alignright,
 .widget_calendar td,
 .widget_calendar th {
 	text-align: center;
-}
-
-.widget .button.secondary {
-  background-color: #fff;
-}
-
-.widget .button.secondary:hover {
-  background-color: #fff;
-  transform:translateY(-1px);
-	box-shadow:0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08)
 }
 
 /* Featured Content
@@ -1446,7 +1435,7 @@ p.entry-meta {
 }
 
 .sidebar .widget-first {
-	background: linear-gradient(60deg,#3d7afd 0,#4c6df9 60%,#4a68ef 50%,#5b5ef4 100%);
+	background: url(./images/one.svg),radial-gradient(ellipse at bottom right,#1cafc6,#012690);
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
@@ -1854,7 +1843,7 @@ p.entry-meta {
 
 	.after-entry {
 		padding: 40px 60px;
-		background: linear-gradient(60deg,#3d7afd 0,#4c6df9 60%,#4a68ef 50%,#5b5ef4 100%);
+		background: url(./images/one.svg),radial-gradient(ellipse at bottom right,#1cafc6,#012690);
 		background-repeat: no-repeat;
 		background-size: cover;
 		box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
@@ -2030,6 +2019,7 @@ p.entry-meta {
 --------------------------------------------- */
 
 .pricing-table {
+	background-color: #f4f3f9;
 	clear: both;
 	overflow: hidden;
 	border-radius: 4px;

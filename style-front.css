@@ -16,7 +16,7 @@
 }
 
 .front-page-1 {
-  background-image: url(./images/one.svg),linear-gradient(60deg,#3d7afd 0,#4c6df9 60%,#4a68ef 50%,#5b5ef4 100%);
+  background-image: url(./images/one.svg),radial-gradient(ellipse at bottom right,#1cafc6,#012690);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,19 +29,8 @@
   font-weight: 900;
 }
 
-.front-page .button {
-  background-color: #0039a2;
-  box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.12);
-}
-
-.front-page .button:hover {
-  background-color: #0039a2;
-  transform:translateY(-1px);
-	box-shadow:0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08)
-}
-
 .front-page-2 .widget-2 {
-    background-image: url(./images/too.svg),linear-gradient(60deg,#73c5ff 0,#3880ff 100%);
+    background-image: url(./images/two.svg),linear-gradient(60deg,#050a14 0,#062456 100%);
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
@@ -54,18 +43,8 @@
   background-color: #f5f7f9;
 }
 
-.front-page-3 .widget-8 {
-    background-image: url(./images/free.svg),linear-gradient(60deg,#050a14 0,#062456 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
-    padding-top: 40px;
-    padding-bottom: 40px;
-    color: #fff;
-}
-
 .front-page-4 {
-  background: linear-gradient(60deg,#3d7afd 0,#4c6df9 50%,#4a68ef 50%,#5b5ef4 100%);
+  background: url(./images/three.svg),radial-gradient(ellipse at top right,#1cafc6,#012690);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -73,7 +52,7 @@
 }
 
 .front-page-5 .widget-4 {
-  background-image: url(./images/four.svg),linear-gradient(60deg,#fcc14e 0,#fed4d1 100%);
+  background-image: url(./images/two.svg),linear-gradient(60deg,#fcc14e 0,#fed4d1 100%);
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
@@ -157,10 +136,12 @@
     border-radius: 8px;
 }
 
-.front-page-3 .widget-first {
+.front-page-3 .widget-first,
+.front-page-3 .widget-last {
   text-align: center;
 }
-.front-page-3 .widget-first h2 {
+.front-page-3 .widget-first h2,
+.front-page-3 .widget-last h2 {
   text-align: center;
 }
 
