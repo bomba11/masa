@@ -142,6 +142,11 @@ add_theme_support(
 	)
 );
 
+// Enable theme support for Gutenberg wide images.
+add_theme_support( 'gutenberg', array(
+	'wide-images' => true,
+) );
+
 // Adds viewport meta tag for mobile browsers.
 add_theme_support(
 	'genesis-responsive-viewport'
