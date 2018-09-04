@@ -2044,11 +2044,31 @@ p.entry-meta {
 
 /* Custom Styles for desktop
 --------------------------- */
-.full-width-content .entry-title,
-.full-width-content h2,
-.full-width-content .intro {
+.landing-page .entry-title,
+.landing-page h2,
+.landing-page .intro {
 	text-align: center;
 }
+
+.entry-content .alignfull {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: auto;
+    max-width: 1000%;
+  }
+
+.entry-content .alignwide {
+    margin-left: calc(25% - 25vw);
+    margin-right: calc(25% - 25vw);
+    width: auto;
+    max-width: 1000%;
+  }
+
+  .alignwide img,
+  .alignfull img {
+    display: block;
+    margin: 0 auto;
+  }
 
 }
 
