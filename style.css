@@ -1938,81 +1938,43 @@ p.entry-meta {
 		width: calc(100% / 3);
 	}
 
-	/* Center Navigation
-	---------------------------------------------------------------------------------------------------- */
+	/* Header Search
+	--------------------------------------------- */
 
-	@supports (grid-area: auto) {
-    .site-header > .wrap {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        justify-items: center;
-    }
+	.site-header > .wrap {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-pack: justify;
+	        -ms-flex-pack: justify;
+	            justify-content: space-between;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
+	    position: relative;
+	}
 
-    .title-area {
-        float: none;
-        grid-column: 1 / -1;
-        grid-row: 1 / -1;
-        justify-self: start;
-    }
+	.title-area,
+	.nav-primary {
+	    float: none;
+	}
 
-    .nav-primary {
-        float: none;
-        grid-column: 1 / -1;
-        grid-row: 1 / -1;
-    }
-}
-.site-header > .wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-            justify-content: center;
-    position: relative;
-}
+	.nav-primary {
+	    -webkit-box-flex: 1;
+	        -ms-flex: 1;
+	            flex: 1;
+	    text-align: right;
+			margin-right: 60px;
+	}
 
-.title-area {
-    float: none;
-    position: absolute;
-    left: 0;
-}
+	.toggle-header-search {
+	    position: absolute;
+	    display: block;
+	    padding: 6px 0 15px;
+	    line-height: 1;
+	    margin-left: 20px;
+	}
 
-/* Header Search
---------------------------------------------- */
-
-.site-header > .wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-}
-
-.title-area,
-.nav-primary {
-    float: none;
-}
-
-/*.nav-primary {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    text-align: right;
-		margin-right: 60px;
-}*/
-
-.toggle-header-search {
-    position: absolute;
-    display: block;
-    padding: 6px 0 15px;
-    line-height: 1;
-    margin-left: 20px;
-}
 
 /* Pricing Page desktop
 --------------------------------------------- */
