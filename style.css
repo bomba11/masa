@@ -714,12 +714,6 @@ th:first-child {
 	margin-bottom: 10px;
 }
 
-.entry-title {
-	font-size: 36px;
-	font-size: 3.6rem;
-	margin-bottom: 10px;
-}
-
 .entry-title a,
 .sidebar .widget-title a {
 	color: #031b4e;
