@@ -1633,6 +1633,10 @@ p.entry-meta {
 	margin-bottom: 30px;
 }
 
+.entry-content img {
+	margin-bottom: 20px;
+}
+
 .gs-faq__question,
 .gs-faq__question:hover,
 .gs-faq__question:active,
