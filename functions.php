@@ -49,7 +49,7 @@ require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.p
 // Defines the child theme (do not remove).
 define( 'CHILD_THEME_NAME', 'MASA Theme' );
 define( 'CHILD_THEME_URL', 'https://fasterwp.com/downloads/masa/' );
-define( 'CHILD_THEME_VERSION', '2.6.2.1' );
+define( 'CHILD_THEME_VERSION', '2.6.3' );
 
 add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
 /**
@@ -436,3 +436,22 @@ function mp_design_cat_posts_per_page( $query ) {
 }
 
 add_filter( 'gca_load_column_styles', '__return_false' );
+
+/**
+ * Remove URL field from comment form
+ *
+ */
+function be_remove_url_from_comment_form( $fields ) {
+  unset($fields['url']);
+  return $fields;
+}
+add_filter( 'comment_form_default_fields', 'be_remove_url_from_comment_form' );
+
+/**
+ * Remove URL from existing comments
+ *
+ */
+function be_remove_url_from_existing_comments( $author_link ) {
+  return strip_tags( $author_link );
+}
+add_filter( 'get_comment_author_link', 'be_remove_url_from_existing_comments' );

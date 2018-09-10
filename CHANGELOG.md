@@ -1,5 +1,12 @@
 # Masa Theme Changelog
 
+## [2.6.3] - 2018-09-11
+
+* move nav back to right
+* remove prism.CSS
+* remove comments link
+
+
 ## [2.6.2] - 2018-05-31
 
 * Centered Navigation
