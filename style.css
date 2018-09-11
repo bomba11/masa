@@ -1312,10 +1312,21 @@ p.entry-meta {
 .pagination {
 	clear: both;
 	margin: 60px 0;
+	border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
 }
 
-.pagination-previous {
+.pagination-previous,
+.pagination-next {
 	padding-bottom: 20px;
+	display: inline-block;
+	float: left;
+	width: 100%;
+	vertical-align: top;
+}
+
+.pagination-next {
+	text-align: left;
 }
 
 .archive-pagination li {
@@ -2032,6 +2043,19 @@ p.entry-meta {
     display: block;
     margin: 0 auto;
   }
+
+	/* Pagination
+	--------------------------- */
+
+	.pagination-previous,
+	.pagination-next {
+	  width: 49%;
+	}
+
+	.pagination-next {
+		text-align: right;
+	  float: right;
+	}
 
 }
 
