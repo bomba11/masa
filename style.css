@@ -1316,8 +1316,8 @@ p.entry-meta {
   padding-bottom: 20px;
 }
 
-.pagination-previous,
-.pagination-next {
+.adjacent-entry-pagination .pagination-previous,
+.adjacent-entry-pagination .pagination-next {
 	padding-bottom: 20px;
 	display: inline-block;
 	float: left;
@@ -2047,8 +2047,8 @@ p.entry-meta {
 	/* Pagination
 	--------------------------- */
 
-	.pagination-previous,
-	.pagination-next {
+	.adjacent-entry-pagination .pagination-previous,
+	.adjacent-entry-pagination .pagination-next {
 	  width: 49%;
 	}
 
