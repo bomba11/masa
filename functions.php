@@ -455,3 +455,12 @@ function be_remove_url_from_existing_comments( $author_link ) {
   return strip_tags( $author_link );
 }
 add_filter( 'get_comment_author_link', 'be_remove_url_from_existing_comments' );
+
+
+// Remove dashicons in frontend for unauthenticated users
+add_action( 'wp_enqueue_scripts', 'toki_dequeue_dashicons' );
+function toki_dequeue_dashicons() {
+	if ( ! is_user_logged_in() ) {
+		wp_deregister_style( 'dashicons' );
+	}
+}
