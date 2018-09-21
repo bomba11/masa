@@ -773,6 +773,7 @@ img.centered,
 }
 
 img.alignnone,
+img.aligncenter,
 .alignnone {
 	margin-bottom: 15px;
 	box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
