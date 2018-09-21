@@ -772,10 +772,7 @@ img.centered,
 	margin: 0 auto 30px;
 }
 
-img.alignnone,
-img.aligncenter,
-.alignnone {
-	margin-bottom: 15px;
+.entry-content img {
 	box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
 }
 
@@ -1645,10 +1642,6 @@ p.entry-meta {
 	margin-bottom: 30px;
 }
 
-.entry-content img {
-	margin-bottom: 20px;
-}
-
 .gs-faq__question,
 .gs-faq__question:hover,
 .gs-faq__question:active,
@@ -2035,7 +2028,6 @@ p.entry-meta {
     margin-right: calc(25% - 25vw);
     width: auto;
     max-width: 1000%;
-		box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
 		margin-bottom: 30px;
   }
 
