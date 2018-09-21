@@ -772,14 +772,7 @@ img.centered,
 	margin: 0 auto 30px;
 }
 
-<<<<<<< HEAD
 .entry-content img {
-=======
-img.alignnone,
-img.aligncenter,
-.alignnone {
-	margin-bottom: 15px;
->>>>>>> c7ba3963b35ea8ff418cdc0c89362dbe0224a176
 	box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
 }
 
