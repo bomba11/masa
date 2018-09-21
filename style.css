@@ -776,6 +776,10 @@ img.centered,
 	box-shadow: 0 6px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.08);
 }
 
+.wp-block-image {
+	margin-bottom: 30px;
+}
+
 a.alignleft,
 img.alignleft,
 .wp-caption.alignleft {
@@ -2029,6 +2033,7 @@ p.entry-meta {
     width: auto;
     max-width: 1000%;
 		margin-bottom: 30px;
+		box-shadow: none;
   }
 
   .alignwide img,
