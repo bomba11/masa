@@ -1669,10 +1669,7 @@ p.entry-meta {
 /* Pricing header */
 
 .price .grey {
-	font-size: 30px;
-	font-size: 3rem;
-	font-weight: 300;
-	padding-bottom: 40px;
+	padding-bottom: 30px;
 	color: #777;
 }
 
