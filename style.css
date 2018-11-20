@@ -2,10 +2,10 @@
 	Theme Name: Masa
 	Theme URI: https://demo.fasterwp.com/masa
 	Description: Masa is built on top of the sample theme created for the Genesis Framework.
-	Author: StudioPress & Andrei Chira
-	Author URI: https://fasterwp.com/
+	Author: Andrei Chira
+	Author URI: https://github.com/fasterwp/masa
 
-	Version: 2.6.3
+	Version: 2.6.4
 
 	Tags: one-column, two-columns, left-sidebar, right-sidebar, accessibility-ready, custom-colors, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
@@ -162,7 +162,7 @@ body > div {
 body {
 	background-color: #fff;
 	color: #031b4e;
-	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	font-family: 'Barlow',-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 	font-size: 18px;
 	font-size: 1.8rem;
 	font-weight: 400;
@@ -257,7 +257,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	font-family: 'Barlow',-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 	font-weight: 700;
 	line-height: 1.2;
 	margin: 0 0 20px;

@@ -48,8 +48,8 @@ require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.p
 
 // Defines the child theme (do not remove).
 define( 'CHILD_THEME_NAME', 'MASA Theme' );
-define( 'CHILD_THEME_URL', 'https://fasterwp.com/downloads/masa/' );
-define( 'CHILD_THEME_VERSION', '2.6.3' );
+define( 'CHILD_THEME_URL', 'https://github.com/fasterwp/masa' );
+define( 'CHILD_THEME_VERSION', '2.6.4' );
 
 add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
 /**
@@ -58,6 +58,13 @@ add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
  * @since 1.0.0
  */
 function genesis_sample_enqueue_scripts_styles() {
+
+	wp_enqueue_style(
+			'google-fonts',
+			'//fonts.googleapis.com/css?family=Barlow:400,400i,700',
+			array(),
+			CHILD_THEME_VERSION
+		);
 
 	wp_enqueue_style(
     'ionicons',
