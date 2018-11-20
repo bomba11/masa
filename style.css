@@ -162,7 +162,7 @@ body > div {
 body {
 	background-color: #fff;
 	color: #031b4e;
-	font-family: 'Barlow',-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 	font-size: 18px;
 	font-size: 1.8rem;
 	font-weight: 400;
@@ -257,7 +257,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Barlow',-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 	font-weight: 700;
 	line-height: 1.2;
 	margin: 0 0 20px;
